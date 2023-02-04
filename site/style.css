@@ -1,0 +1,58 @@
+h1, h2, h3, h5 {
+    text-align: center;
+    margin: auto;
+    color: rgb(175, 13, 13)
+}
+
+h6 {
+    text-align: center;
+    color: rgba(167, 48, 48, 0.678);
+}
+
+p {
+    margin: auto;
+    color: rgb(122, 89, 17);
+    font-size: small;
+}
+
+b {
+    color: rgba(83, 59, 14, 0.87)
+}
+
+nav {
+    text-align: center;
+}
+
+img {
+    margin: auto;
+    float: left;
+}
+
+#img2 {
+    margin: auto;
+    float: right;
+}
+
+iframe {
+    border: 0;
+    margin: auto;
+    height: 375px;
+    width: 100%;
+    margin: auto;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(212, 48, 7);
+}
+
+a:hover {
+    color: rgba(102, 170, 38, 0.541);
+    background-color: rgba(124, 5, 5, 0.432);
+}
+
+body {
+    background-color: rgb(41, 32, 32);
+    text-align: center;
+}
