@@ -86,7 +86,7 @@ a:link, a:visited {
 
 a:hover {
     color: rgba(115, 161, 30, 0.493);
-    font-weight: bold;
+    font-weight: lighter;
     background-color: #1d5527e0;
     transition: all 0.2s ease-in-out;
     padding-left: 6px;
@@ -139,4 +139,14 @@ header:hover, footer:hover {
     background-color: #080707c9;
     border-radius: 0px;
     opacity: 90%;
+    font-size:large;
+}
+
+header:hover #img1, header:hover #img2 {
+    transition: all 0.2s ease-in-out;
+    height: 95px;
+}
+
+nav {
+    font-size: small;
 }
