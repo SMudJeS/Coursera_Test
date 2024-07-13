@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Calculator in JavaScript!</title>
+</head>
+
+<body>
+
+    <form id="calcForm">
+        <input type="number" id="num01" placeholder="First Number" required>
+        <select id="operator" required>
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="number" id="num02" placeholder="Second Number" required>
+        <button type="submit">Calculate!</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('calcForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const num01 = parseFloat(document.getElementById('num01').value);
+            const num02 = parseFloat(document.getElementById('num02').value);
+            const operator = document.getElementById('operator').value;
+            const resultDiv = document.getElementById('result');
+            let errors = false;
+
+            resultDiv.innerHTML = '';  // Clear previous results
+
+            if (isNaN(num01) || isNaN(num02)) {
+                resultDiv.innerHTML += "<p class='calc-error'>Please only use numbers!</p>";
+                errors = true;
+            }
+
+            if (!errors) {
+                let value = 0;
+
+                switch (operator) {
+                    case "add":
+                        value = num01 + num02;
+                        break;
+                    case "subtract":
+                        value = num01 - num02;
+                        break;
+                    case "multiply":
+                        value = num01 * num02;
+                        break;
+                    case "divide":
+                        value = num01 / num02;
+                        break;
+                    default:
+                        resultDiv.innerHTML += "<p class='calc-error'>Something went HORRIBLY wrong!</p>";
+                        errors = true;
+                }
+
+                if (!errors) {
+                    resultDiv.innerHTML += "<p class='calc-result'>Result = " + value + "</p>";
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
